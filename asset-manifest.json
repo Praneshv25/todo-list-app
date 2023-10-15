@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Praneshv25/todo-list-app.git/static/css/main.9359cbdd.css",
+    "main.js": "/Praneshv25/todo-list-app.git/static/js/main.966756d5.js",
+    "static/js/787.b6086cd3.chunk.js": "/Praneshv25/todo-list-app.git/static/js/787.b6086cd3.chunk.js",
+    "index.html": "/Praneshv25/todo-list-app.git/index.html",
+    "main.9359cbdd.css.map": "/Praneshv25/todo-list-app.git/static/css/main.9359cbdd.css.map",
+    "main.966756d5.js.map": "/Praneshv25/todo-list-app.git/static/js/main.966756d5.js.map",
+    "787.b6086cd3.chunk.js.map": "/Praneshv25/todo-list-app.git/static/js/787.b6086cd3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9359cbdd.css",
+    "static/js/main.966756d5.js"
+  ]
+}
