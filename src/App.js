@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import TaskList from './components/TaskList';
+import TaskForm from './components/TaskForm';
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+    const localStorageKey = 'taskList';
+
+    useEffect(() => {
+        const savedTasks = localStorage.getItem(localStorageKey);
+        if (savedTasks) {
+            setTasks(JSON.parse(savedTasks));
+        }
+    }, []);
+
+    // Save tasks to local storage whenever tasks change
+    useEffect(() => {
+        localStorage.setItem(localStorageKey, JSON.stringify(tasks));
+    }, [tasks]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <h1>My To-Do List</h1>
+        <TaskForm tasks={tasks} setTasks={setTasks} />
+        <TaskList tasks={tasks} setTasks={setTasks} />
+      </div>
   );
 }
 
